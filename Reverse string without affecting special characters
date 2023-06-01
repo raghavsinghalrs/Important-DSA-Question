@@ -1,0 +1,16 @@
+str = "ab,c,de!$"
+str1 = list(str)
+l = 0
+r = len(str1)-1
+
+while l<=r:
+  if not str1[l].isalpha():
+    l+=1 
+  elif not str1[r].isalpha():
+    r-=1 
+  else:
+    str1[l],str1[r]=str1[r],str1[l]
+    l+=1 
+    r-=1
+    
+print(str1)
